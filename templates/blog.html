@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="title is-1">ब्लॉग</h1>
+    <div class="block">
+    {% for page in paginator.pages %}
+        <div class="box">
+            <h3 class="title is-4"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+            <p class="subtitle is-6">{{ page.date | date(format="%Y-%m-%d") }}</p>
+            <div class="content">
+                {{ page.summary | safe }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

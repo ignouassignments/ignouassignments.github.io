@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNOU ASSIGNMENTS</title>
+    <link rel="stylesheet" href="/app.css">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <span class="has-text-weight-bold">IGNOU ASSIGNMENTS</span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/blog/">ब्लॉग</a>
+                <a class="navbar-item" href="/about/">हमारे बारे में</a>
+                <a class="navbar-item" href="/contact/">संपर्क</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <button id="search-trigger-button" class="button is-light">खोजें</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            
+    <div class="content">
+        <h1 class="title is-1">हमसे संपर्क करें</h1>
+        <p>आप मुझसे [email protected] पर संपर्क कर सकते हैं।</p>
+
+    </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2025 IGNOU ASSIGNMENTS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bulma Modal for Search -->
+    <div id="search-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <!-- Pagefind UI will be injected here -->
+                <div id="search-container"></div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // 1. Initialize Pagefind to render in our modal's container
+            new PagefindUI({ 
+                element: "#search-container",
+                showSubResults: true
+            });
+
+            // 2. Add event listeners to open and close the Bulma modal
+            const triggerButton = document.getElementById('search-trigger-button');
+            const searchModal = document.getElementById('search-modal');
+            const closeModalButton = searchModal.querySelector('.modal-close');
+            const modalBackground = searchModal.querySelector('.modal-background');
+
+            function openModal() {
+                searchModal.classList.add('is-active');
+                // Automatically focus the search input when the modal opens
+                const searchInput = searchModal.querySelector('.pagefind-ui__search-input');
+                if (searchInput) {
+                    setTimeout(() => searchInput.focus(), 100);
+                }
+            }
+
+            function closeModal() {
+                searchModal.classList.remove('is-active');
+            }
+
+            triggerButton.addEventListener('click', openModal);
+            closeModalButton.addEventListener('click', closeModal);
+            modalBackground.addEventListener('click', closeModal);
+
+            // Add keyboard shortcut to close the modal
+            document.addEventListener('keydown', function (event) {
+                if (event.key === "Escape") {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
