@@ -7,7 +7,7 @@
     "hot": "mix watch --hot",
     "prod": "npm run production",
     "production": "mix --production",
-    "postbuild": "pagefind --site public"
+    "postbuild": "pagefind --site docs"
   },
   "devDependencies": {
     "bulma": "^1.0.4",
