@@ -2,7 +2,7 @@
 
 Welcome to **IGNOU Assignments in Hindi** – a dedicated resource for **Indira Gandhi National Open University (IGNOU)** students who prefer to study and write their assignments in **हिंदी (Hindi medium)**.
 
-📍 Website: [ignouassignments.github.io](https://ignouassignments.github.io/)
+📍 Website: [ignou.biz](https://ignou.biz)
 
 ---
 
@@ -26,7 +26,7 @@ Many IGNOU learners come from rural and semi-urban backgrounds where Hindi is th
 
 ## 🔗 Useful Links
 
-- 🌐 Website: [ignouassignments.github.io](https://ignouassignments.github.io/)
+- 🌐 Website: [ignou.biz](https://ignou.biz/)
 - 📘 IGNOU Official Assignments Page: [webservices.ignou.ac.in/assignments](https://webservices.ignou.ac.in/assignments/)
 
 ---
